@@ -1,0 +1,49 @@
+* {
+	font-size: 1.25em;
+	font-family: 'Roboto', sans-serif;
+}
+body {
+	margin: 0;
+}
+.timewrap {
+	width: 100%;
+	text-align: center;
+}
+.timedis {
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+	}
+.timestatus {
+	display: block;
+	font-size: 1.4em;
+	color: #FFF;
+	width: 100%;
+	font-weight: lighter;
+	padding: 20px 0px 20px 0px;
+}
+.breaking {background: #0F0;}
+.working {background: #F00;}
+.master {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: lighter;
+}
+button {
+	padding: 10px;
+	display: inline-block;
+	background: #0DF;
+	border: none;
+	box-shadow: 0px 1px 1px 0px #DDD;
+	width: 20%;
+	font-size: 0.75em;
+	color: #FFF;
+}
+button:hover {
+	background: #0AF;
+	cursor: pointer;
+}
+button:active {
+	background: #0CF;
+}

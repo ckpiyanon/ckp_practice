@@ -6,10 +6,6 @@
   "scripts": {
     "start": "node ./index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ckpiyanon/ckp_chat.git"
-  },
   "author": "",
   "license": "ISC",
   "bugs": {

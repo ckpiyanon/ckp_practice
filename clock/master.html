@@ -10,6 +10,12 @@
 			<div class="timestatus working">WORKING</div>
 			<span id="timehr" class="timedis">00</span>:<span id="timemin" class="timedis">00</span>:<span id="timesec" class="timedis">00</span>
 		</div>
+		<div class="master">
+			<button id="timestart">RESUME</button>
+			<button id="timestop">STOP</button>
+			<button id="timereset">RESET</button>
+			<button id="timeskip">SKIP</button>
+		</div>
 		<script src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
 		<script src="socket.io/socket.io.js"></script>
 		<script>
@@ -27,6 +33,10 @@
 					$('.working').css('display','block');
 				}
 			});
+			$('#timestart').click(function() {console.log('start'); socket.emit('time event','start');});
+			$('#timestop').click(function() {console.log('stop'); socket.emit('time event','stop');});
+			$('#timereset').click(function() {console.log('reset'); socket.emit('time event','reset')});
+			$('#timeskip').click(function() {console.log('skip'); socket.emit('time event','skip')});
 		</script>
 	</body>
 </html>
