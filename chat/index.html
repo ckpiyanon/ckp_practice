@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Chat</title>
+		<style>
+			* {margin: 0; padding: 0; box-sizing: border-box;}
+			body {font: 13px Helvetica, Arial;}
+			form {padding: 3px; position: fixed; bottom: 0px; width: 100%;}
+			form input {border: 0; padding: 10px; width: 90%; margin-right: 0.5%;}
+			form button {width: 9%; background: #555555; color: #FFF; border: none; padding: 10px;}
+			#messages {list-style-type: none; margin: 0; padding: 0;}
+			#messages li {padding: 5px 10px; display: block;}
+			#messages li:nth-child(odd) {background: #EEE;}
+		</style>
+	</head>
+	<body>
+		<ul id="messages"></ul>
+		<form action="">
+			<input type="text" id="msg" autocomplete="off"><button>Send</button>
+		</form>
+		<script src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var socket = io();
+			$('#msg').focus();
+			$('form').submit(function() {
+				socket.emit('chat message', $('#msg').val());
+				$('#msg').val('');
+				$('#msg').focus();
+				return false;
+			});
+			socket.on('chat message', function(id,msg) {
+				var elem = $('<li id="' + id + '">' + msg + '</li>');
+				$('#messages').append(elem);
+				elem.click(function(ev) {
+					socket.emit('chat remove',ev.target.id);
+				});
+			});
+			socket.on('chat remove',function(id) {
+				$('#' + id).remove();
+				console.log(id);
+			});
+		</script>
+	</body>
+</html>

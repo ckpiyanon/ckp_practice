@@ -1,0 +1,24 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckpiyanon/ckp_chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckpiyanon/ckp_chat/issues"
+  },
+  "homepage": "https://github.com/ckpiyanon/ckp_chat#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jquery": "^3.0.0",
+    "socket.io": "^1.4.6"
+  }
+}
