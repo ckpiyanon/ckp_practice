@@ -1,0 +1,25 @@
+.cart-wrapper {
+	display: block;
+	position: fixed;
+	padding: 0;
+	@media screen and (max-width: $sm-max) {
+		height: 40%;
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+	}
+	@media screen and (min-width: $md-min) {
+		height: 100%;
+		width: 30%;
+		top: 0px;
+		right: 0px;
+	}
+
+	background: #FFF;
+	color: $fontColor;
+	box-shadow: -2px 0px 5px #AAA;
+	overflow: auto;
+	@import 'cart-header';
+	@import 'cart-container';
+	@import 'cart-checkout';
+}

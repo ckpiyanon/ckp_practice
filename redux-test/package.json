@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build-style": "sass styles/main.scss:build/style.css --watch --style compressed"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
+    "mongodb": "^2.1.18",
+    "node-sass": "^3.8.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",

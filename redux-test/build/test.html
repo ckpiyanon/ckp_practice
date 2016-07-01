@@ -1,0 +1,16 @@
+<html>
+	<script>
+		var xhttp = new XMLHttpRequest();
+		var data;
+		xhttp.onreadystatechange = () => {
+			if(xhttp.readyState == 4 && xhttp.status == 200)
+				data = JSON.parse(xhttp.responseText);
+			console.log(data);
+		}
+		xhttp.open('GET', 'http://localhost:3000/getData', true);
+		xhttp.send();
+		// x.forEach((elem,index) => {console.log(index + '->' + elem['name']);});
+	</script>
+	<body>
+	</body>
+</html>

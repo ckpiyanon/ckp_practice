@@ -1,7 +1,7 @@
 var config = {
-	entry: './main.js',
+	entry: './react_modules/index.js',
 	output: {
-		path: './',
+		path: './build',
 		filename: 'index.js'
 	},
 	devServer: {
@@ -9,14 +9,16 @@ var config = {
 		port: 3000
 	},
 	module: {
-		loaders: [{
-			test: /\.jsx?$/,
-			exclude: /node_modules/,
-			loader: 'babel',
-			query: {
-				presets: ['es2015','react']
+		loaders: [
+			{
+				test: /\.js?$/,
+				exclude: /node_modules/,
+				loader: 'babel',
+				query: {
+					presets: ['es2015','react']
+				},
 			}
-		}]
+		]
 	}
 }
 

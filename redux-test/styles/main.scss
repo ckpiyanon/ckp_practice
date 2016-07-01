@@ -1,0 +1,20 @@
+$fontColor: #B71C1C;
+$fontFamily: 'Roboto', sans-serif;
+
+$xs-max: 383px;
+$sm-min: 384px; $sm-max: 767px;
+$md-min: 768px; $md-max: 991px;
+$lg-min: 992px; $lg-max: 1247px;
+$xl-min: 1248px;
+
+@mixin transition($val) {
+	-webkit-transition: $val;
+	   -moz-transition: $val;
+	     -o-transition: $val;
+	        transition: $val;
+}
+
+@import 'body';
+@import 'cart';
+@import 'shop';
+@import url(https://fonts.googleapis.com/css?family=Roboto);
