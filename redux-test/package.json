@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build-style": "sass styles/main.scss:build/style.css --watch --style compressed"
+    "build-style": "sass src/styles/main.scss:build/style.css --watch --style compressed"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "socket.io": "^1.4.8",
     "webpack": "^1.13.1"
   }
 }

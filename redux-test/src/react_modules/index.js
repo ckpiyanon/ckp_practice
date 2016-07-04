@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
+import cartApp from './reducers';
 import App from './components/App';
 
-// let store = createStore(shopping);
+let store = createStore(cartApp);
 
-ReactDOM.render(<App />, document.getElementById('content-wrapper'))
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('content-wrapper'))

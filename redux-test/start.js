@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
@@ -11,7 +13,7 @@ app.use('/getData', (request,response) => {
 	var url = 'mongodb://188.166.189.216:37017/itim';
 	MongoClient.connect(url,(err,db) => {
 		if(err)	response.send('Unable to connect: ',err);
-		else	db.collection('product').find({}).toArray((err,res) => {response.send(res);});
+		else	db.collection('product').find().toArray((err,res) => {response.send(res);});
 	});
 });
 

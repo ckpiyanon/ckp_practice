@@ -1,5 +1,5 @@
 var config = {
-	entry: './react_modules/index.js',
+	entry: './src/react_modules/index.js',
 	output: {
 		path: './build',
 		filename: 'index.js'
